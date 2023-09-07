@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        bgDark: '#242424',
         primary: '#9333ea',
         primaryHover: '#7e22ce',
       },
