@@ -3,7 +3,10 @@ import { AiFillInstagram } from 'react-icons/ai'
 
 const Home = () => {
   return (
-    <section className="flex items-center min-h-screen max-w-[55rem] relative">
+    <section
+      id="home"
+      className="flex items-center min-h-screen  md:max-w-[35rem] lg:max-w-[45rem] relative p-2 xs:px-10 md:px-20"
+    >
       <div className="flex flex-col gap-5">
         <h1 className="text-6xl font-bold">
           Hi, I'm <span className="text-primary">Luis Flores</span>
@@ -36,25 +39,25 @@ const Home = () => {
           <div className="absolute bottom-12 flex gap-5">
             <button
               type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-bgDark  dark:hover:bg-primary"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
             >
               <FaGithub />
             </button>
             <button
               type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-bgDark  dark:hover:bg-primary"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
             >
               <FaLinkedinIn />
             </button>
             <button
               type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-bgDark  dark:hover:bg-primary"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
             >
               <FaFacebookF />
             </button>
             <button
               type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-bgDark  dark:hover:bg-primary"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
             >
               <AiFillInstagram />
             </button>

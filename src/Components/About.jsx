@@ -2,7 +2,7 @@ import imagePlaceholderSquere from '../assets/imagePlaceholderSquere.png'
 
 const About = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center gap-8 pb-20">
+    <section className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20">
       <h2 className="text-5xl font-bold text-center">
         About <span className="text-primary">Me</span>
       </h2>
@@ -10,7 +10,7 @@ const About = () => {
         <img
           src={imagePlaceholderSquere}
           alt="about me image"
-          className="w-[250px] h-[250px] rounded-full border-[0.4rem] border-primary"
+          className="w-[150px] h-[150px] rounded-full border-[0.4rem] border-primary"
         />
       </div>
       <div className="flex flex-col justify-center items-center gap-7">
