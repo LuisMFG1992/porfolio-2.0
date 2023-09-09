@@ -5,8 +5,13 @@ export default {
     extend: {
       colors: {
         bgDark: '#242424',
+        bgDarker: '#1a1a1a',
         primary: '#9333ea',
         primaryHover: '#7e22ce',
+        secunday: '#ffff',
+      },
+      screens: {
+        xs: '325px',
       },
     },
   },
