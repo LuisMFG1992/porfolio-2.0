@@ -5,7 +5,9 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
+  const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
   const size = useWindowResize()
+
   const isMobile = size.width < 768 ? true : false
 
   const changeNavbarColor = () => {
@@ -14,6 +16,10 @@ const Navbar = () => {
     } else {
       setNavbarColor(false)
     }
+  }
+
+  const toggleHamburgerMenu = () => {
+    setDisplayHamburgerMenu(!displayHamburgerMenu)
   }
 
   window.addEventListener('scroll', changeNavbarColor)
@@ -28,16 +34,16 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">LMFG</h1>
           <div className="flex gap-5 text-[1.2rem] font-semibold">
-            <a href="#" className="text-primary">
+            <a href="#home" className="text-primary">
               Home
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="#about" className="hover:text-primary">
               About
             </a>
-            <a href="#" className="hover:text-primary">
-              Tecnologies
+            <a href="#projects" className="hover:text-primary">
+              Projects
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="#contact" className="hover:text-primary">
               Contact
             </a>
           </div>
@@ -47,7 +53,34 @@ const Navbar = () => {
       {isMobile && (
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">LMFG</h1>
-          <GiHamburgerMenu size={'2rem'} />
+          <div
+            className="flex justify-between items-center h-12"
+            onClick={toggleHamburgerMenu}
+          >
+            <div className="relative">
+              <GiHamburgerMenu size={'1.5rem'} className="cursor-pointer" />
+              {displayHamburgerMenu && (
+                <div
+                  className={`bg-red-900 min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md ${
+                    NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
+                  }`}
+                >
+                  <a href="#home" className="py-2">
+                    Home
+                  </a>
+                  <a href="#about" className="py-2">
+                    About
+                  </a>
+                  <a href="#projects" className="py-2">
+                    Projects
+                  </a>
+                  <a href="#contact" className="py-2">
+                    Contact
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </div>

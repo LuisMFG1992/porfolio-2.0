@@ -1,7 +1,10 @@
 const Contact = () => {
   return (
-    <section className="bg-bgDarker flex flex-col justify-center items-center py-20">
-      <form className="w-[35rem]">
+    <section
+      id="contact"
+      className="bg-bgDarker flex flex-col justify-center items-center py-20"
+    >
+      <form className="w-[80%] min-w-[236px] max-w-[400px]">
         <div className="mb-6">
           <label
             htmlFor="name"

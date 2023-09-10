@@ -2,7 +2,10 @@ import imagePlaceholderSquere from '../assets/imagePlaceholderSquere.png'
 
 const About = () => {
   return (
-    <section className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20">
+    <section
+      id="about"
+      className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20"
+    >
       <h2 className="text-5xl font-bold text-center">
         About <span className="text-primary">Me</span>
       </h2>
@@ -21,8 +24,6 @@ const About = () => {
           Possimus, unde. Earum repellat officiis explicabo nihil ratione
           reiciendis obcaecati eius? Lorem ipsum dolor, sit amet consectetur
           adipisicing elit. Similique possimus sint in fugit iusto atque nostrum
-          quibusdam sunt, quam, at aspernatur architecto blanditiis, illum
-          impedit. Deserunt nam distinctio sit ullam.
         </p>
       </div>
       <button
