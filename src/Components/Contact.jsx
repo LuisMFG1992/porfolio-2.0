@@ -2,8 +2,11 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-bgDarker flex flex-col justify-center items-center py-20"
+      className="bg-bgDarker flex flex-col justify-center items-center py-20 gap-8"
     >
+      <h2 className="text-5xl font-bold text-center">
+        Contact <span className="text-primary">Me</span>
+      </h2>
       <form className="w-[80%] min-w-[236px] max-w-[400px]">
         <div className="mb-6">
           <label

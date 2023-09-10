@@ -1,10 +1,15 @@
-// import imagePlacerholder from '../assets/imagePlaceholderLandscape.png'
+// import BookTracker from '../assets/BookTracker.png'
 
-const Cards = () => {
+const Cards = (project) => {
+  const { name, image } = project
   return (
-    <div className="bg-bgDarker w-60 h-64 flex flex-col justify-start items-center rounded-lg">
-      {/* <img src={imagePlacerholder} alt="" className=" rounded-t-lg" />
-      <h3>Title</h3> */}
+    <div className="bg-bgDarker w-72 h-60 flex flex-col justify-start items-center rounded-lg relative border-[0.2rem] border-primary">
+      <img
+        src={image}
+        alt={`${name} cover`}
+        className="rounded-lg p-1 h-48 object-fill"
+      />
+      <p className="pt-2">{name}</p>
     </div>
   )
 }

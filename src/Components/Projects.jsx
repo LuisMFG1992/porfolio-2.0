@@ -1,5 +1,26 @@
 import Cards from './Cards'
 
+import BookTracker from '../assets/BookTracker.png'
+import imagePlaceholderLandscape from '../assets/imagePlaceholderLandscape.png'
+
+const projects = [
+  {
+    id: 1,
+    name: 'Book Tracker',
+    image: BookTracker,
+  },
+  {
+    id: 2,
+    name: 'Calculator',
+    image: imagePlaceholderLandscape,
+  },
+  {
+    id: 3,
+    name: 'Cutter optimizer',
+    image: imagePlaceholderLandscape,
+  },
+]
+
 const Projects = () => {
   return (
     <section
@@ -11,13 +32,10 @@ const Projects = () => {
         The power to create is in your hands. Code that transforms ideas into
         reality.
       </p>
-      <div className="flex flex-wrap gap-5 lg:gap-10 max-w-[50rem] justify-center items-center">
-        <Cards />
-        <Cards />
-        <Cards />
-        {/* <Cards />
-        <Cards />
-        <Cards /> */}
+      <div className="flex flex-wrap gap-5 lg:gap-10 max-w-[70rem] justify-center items-center">
+        {projects.map((element) => (
+          <Cards key={element.id} name={element.name} image={element.image} />
+        ))}
       </div>
       <button
         type="button"
