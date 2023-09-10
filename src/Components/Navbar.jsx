@@ -84,7 +84,7 @@ const Navbar = () => {
       )}
 
       {/* Desktop */}
-      {isMobile === false && (
+      {!isMobile && (
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">LMFG</h1>
           <div className="flex gap-5 text-[1.2rem] font-semibold">
