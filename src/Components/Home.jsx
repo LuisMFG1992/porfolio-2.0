@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex items-center min-h-screen sm:max-w-[35rem] lg:max-w-[45rem] relative p-2 xs:px-10 md:px-20"
+      className="flex items-center min-h-screen max-w-[35rem] lg:max-w-[45rem] relative p-2 xs:px-10 md:px-20"
     >
       <div className="flex flex-col gap-5">
         <h1 className="text-6xl font-bold">

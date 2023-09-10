@@ -11,7 +11,7 @@ export default {
         secunday: '#ffff',
       },
       screens: {
-        xs: '325px',
+        xs: '425px',
       },
     },
   },

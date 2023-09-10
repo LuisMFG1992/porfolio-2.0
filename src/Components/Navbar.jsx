@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useWindowResize } from '../hooks/useWindowResize'
 
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -6,9 +6,6 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
-  const size = useWindowResize()
-
-  const isMobile = size.width < 768 ? true : false
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 90) {
@@ -22,7 +19,16 @@ const Navbar = () => {
     setDisplayHamburgerMenu(!displayHamburgerMenu)
   }
 
-  window.addEventListener('scroll', changeNavbarColor)
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbarColor)
+
+    return () => {
+      window.removeEventListener('scroll', changeNavbarColor)
+    }
+  }, [])
+
+  const size = useWindowResize()
+  const isMobile = size.width < 768 ? true : false
 
   return (
     <div
@@ -30,26 +36,7 @@ const Navbar = () => {
         NavbarColor ? 'bg-bgDarker border-b-2 border-primary' : ''
       }`}
     >
-      {isMobile === false && (
-        <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold">LMFG</h1>
-          <div className="flex gap-5 text-[1.2rem] font-semibold">
-            <a href="#home" className="text-primary">
-              Home
-            </a>
-            <a href="#about" className="hover:text-primary">
-              About
-            </a>
-            <a href="#projects" className="hover:text-primary">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-primary">
-              Contact
-            </a>
-          </div>
-        </div>
-      )}
-
+      {/* Mobile */}
       {isMobile && (
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">LMFG</h1>
@@ -61,25 +48,52 @@ const Navbar = () => {
               <GiHamburgerMenu size={'1.5rem'} className="cursor-pointer" />
               {displayHamburgerMenu && (
                 <div
-                  className={`bg-red-900 min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md ${
+                  className={`bg-red-900 min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md font-semibold ${
                     NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
                   }`}
                 >
-                  <a href="#home" className="py-2">
+                  <a href="#home" className="py-2 active:text-primary">
                     Home
                   </a>
-                  <a href="#about" className="py-2">
+                  <a href="#about" className="py-2 active:text-primary">
                     About
                   </a>
-                  <a href="#projects" className="py-2">
+                  <a href="#projects" className="py-2 active:text-primary">
                     Projects
                   </a>
-                  <a href="#contact" className="py-2">
+                  <a href="#contact" className="py-2 active:text-primary">
                     Contact
                   </a>
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop */}
+      {isMobile === false && (
+        <div className="flex justify-between items-center h-12">
+          <h1 className="text-3xl font-semibold">LMFG</h1>
+          <div className="flex gap-5 text-[1.2rem] font-semibold">
+            <a href="#home" className=" hover:text-primary focus:text-primary">
+              Home
+            </a>
+            <a href="#about" className="hover:text-primary focus:text-primary">
+              About
+            </a>
+            <a
+              href="#projects"
+              className="hover:text-primary focus:text-primary"
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="hover:text-primary focus:text-primary"
+            >
+              Contact
+            </a>
           </div>
         </div>
       )}
