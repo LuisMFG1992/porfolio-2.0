@@ -11,7 +11,7 @@ const Projects = () => {
         The power to create is in your hands. Code that transforms ideas into
         reality.
       </p>
-      <div className="flex flex-wrap gap-5 max-w-[50rem] justify-center items-center">
+      <div className="flex flex-wrap gap-5 lg:gap-10 max-w-[50rem] justify-center items-center">
         <Cards />
         <Cards />
         <Cards />

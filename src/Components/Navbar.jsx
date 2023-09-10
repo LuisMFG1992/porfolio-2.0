@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
+  const [selectedLink, setSelectedLink] = useState(null)
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 90) {
@@ -19,6 +20,10 @@ const Navbar = () => {
     setDisplayHamburgerMenu(!displayHamburgerMenu)
   }
 
+  const handleLinkClick = (index) => {
+    setSelectedLink(index)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', changeNavbarColor)
 
@@ -26,6 +31,13 @@ const Navbar = () => {
       window.removeEventListener('scroll', changeNavbarColor)
     }
   }, [])
+
+  const links = [
+    { text: 'Home', url: '#home' },
+    { text: 'About', url: '#about' },
+    { text: 'Projects', url: '#projects' },
+    { text: 'Contact', url: '#contact' },
+  ]
 
   const size = useWindowResize()
   const isMobile = size.width < 768 ? true : false
@@ -52,18 +64,18 @@ const Navbar = () => {
                     NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
                   }`}
                 >
-                  <a href="#home" className="py-2 active:text-primary">
-                    Home
-                  </a>
-                  <a href="#about" className="py-2 active:text-primary">
-                    About
-                  </a>
-                  <a href="#projects" className="py-2 active:text-primary">
-                    Projects
-                  </a>
-                  <a href="#contact" className="py-2 active:text-primary">
-                    Contact
-                  </a>
+                  {links.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      onClick={() => handleLinkClick(index)}
+                      className={`hover:text-primary focus:text-primary py-2 ${
+                        selectedLink === index ? 'text-primary' : 'text-white'
+                      }`}
+                    >
+                      {link.text}
+                    </a>
+                  ))}
                 </div>
               )}
             </div>
@@ -76,24 +88,18 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">LMFG</h1>
           <div className="flex gap-5 text-[1.2rem] font-semibold">
-            <a href="#home" className=" hover:text-primary focus:text-primary">
-              Home
-            </a>
-            <a href="#about" className="hover:text-primary focus:text-primary">
-              About
-            </a>
-            <a
-              href="#projects"
-              className="hover:text-primary focus:text-primary"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-primary focus:text-primary"
-            >
-              Contact
-            </a>
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                onClick={() => handleLinkClick(index)}
+                className={`hover:text-primary focus:text-primary ${
+                  selectedLink === index ? 'text-primary' : 'text-white'
+                }`}
+              >
+                {link.text}
+              </a>
+            ))}
           </div>
         </div>
       )}
