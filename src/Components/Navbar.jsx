@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
-  const [selectedLink, setSelectedLink] = useState(null)
+  const [selectedLink, setSelectedLink] = useState(0)
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 90) {
@@ -66,10 +66,10 @@ const Navbar = () => {
                 >
                   {links.map((link, index) => (
                     <a
-                      key={index}
+                      key={link.text}
                       href={link.url}
                       onClick={() => handleLinkClick(index)}
-                      className={`hover:text-primary focus:text-primary py-2 ${
+                      className={`hover:text-primary py-2 ${
                         selectedLink === index ? 'text-primary' : 'text-white'
                       }`}
                     >
@@ -93,7 +93,7 @@ const Navbar = () => {
                 key={index}
                 href={link.url}
                 onClick={() => handleLinkClick(index)}
-                className={`hover:text-primary focus:text-primary ${
+                className={`hover:text-primary ${
                   selectedLink === index ? 'text-primary' : 'text-white'
                 }`}
               >
