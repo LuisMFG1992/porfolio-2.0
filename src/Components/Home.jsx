@@ -1,6 +1,29 @@
 import { FaGithub, FaLinkedinIn, FaFacebookF } from 'react-icons/fa6'
 import { AiFillInstagram } from 'react-icons/ai'
 
+const socialMedia = [
+  {
+    name: 'Github',
+    icon: <FaGithub />,
+    link: '',
+  },
+  {
+    name: 'Linkedin',
+    icon: <FaLinkedinIn />,
+    link: '',
+  },
+  {
+    name: 'Facebook',
+    icon: <FaFacebookF />,
+    link: '',
+  },
+  {
+    name: 'Instagram',
+    icon: <AiFillInstagram />,
+    link: '',
+  },
+]
+
 const Home = () => {
   return (
     <section
@@ -38,30 +61,16 @@ const Home = () => {
           </button>
 
           <div className="absolute bottom-12 flex gap-5">
-            <button
-              type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
-            >
-              <FaGithub />
-            </button>
-            <button
-              type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
-            >
-              <FaLinkedinIn />
-            </button>
-            <button
-              type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
-            >
-              <FaFacebookF />
-            </button>
-            <button
-              type="button"
-              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
-            >
-              <AiFillInstagram />
-            </button>
+            {socialMedia.map((element) => (
+              <a
+                key={element.name}
+                href={element.link}
+                type="button"
+                className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
+              >
+                {element.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>
