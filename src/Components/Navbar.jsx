@@ -51,7 +51,9 @@ const Navbar = () => {
       {/* Mobile */}
       {isMobile && (
         <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold">LMFG</h1>
+          <h1 className="text-3xl font-semibold">
+            LMFG<span className="text-primary text-5xl">.</span>
+          </h1>
           <div
             className="flex justify-between items-center h-12"
             onClick={toggleHamburgerMenu}
@@ -60,7 +62,7 @@ const Navbar = () => {
               <GiHamburgerMenu size={'1.5rem'} className="cursor-pointer" />
               {displayHamburgerMenu && (
                 <div
-                  className={`bg-red-900 min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md font-semibold ${
+                  className={`min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md font-semibold ${
                     NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
                   }`}
                 >
@@ -86,7 +88,9 @@ const Navbar = () => {
       {/* Desktop */}
       {!isMobile && (
         <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold">LMFG</h1>
+          <h1 className="text-3xl font-semibold">
+            LMFG<span className="text-primary text-5xl">.</span>
+          </h1>
           <div className="flex gap-5 text-[1.2rem] font-semibold">
             {links.map((link, index) => (
               <a

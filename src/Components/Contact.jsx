@@ -7,21 +7,20 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs
-      .sendForm(
-        'service_tq8k65i',
-        'template_gnzo9tr',
-        form.current,
-        'DuN_3yr7llXMfFFnE'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
+    emailjs.sendForm(
+      'service_tq8k65i',
+      'template_gnzo9tr',
+      form.current,
+      'DuN_3yr7llXMfFFnE'
+    )
+    // .then(
+    //   (result) => {
+    //     console.log(result.text)
+    //   },
+    //   (error) => {
+    //     console.log(error.text)
+    //   }
+    // )
   }
 
   return (
@@ -65,22 +64,6 @@ const Contact = () => {
             name="user_email"
             className="shadow-sm bg-gray-50  text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-bgDark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             placeholder="name@mail.com"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <label
-            htmlFor="subject"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
-          >
-            Your Subject
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="user_subject"
-            className="shadow-sm bg-gray-50  text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-bgDark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             required
           />
         </div>

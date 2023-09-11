@@ -5,22 +5,22 @@ const socialMedia = [
   {
     name: 'Github',
     icon: <FaGithub />,
-    link: '',
+    link: 'https://github.com/LuisMFG1992?tab=repositories',
   },
   {
     name: 'Linkedin',
     icon: <FaLinkedinIn />,
-    link: '',
+    link: 'https://www.linkedin.com/in/luismfgdev/',
   },
   {
     name: 'Facebook',
     icon: <FaFacebookF />,
-    link: '',
+    link: 'https://www.facebook.com/luismiguel.floresgranadillo',
   },
   {
     name: 'Instagram',
     icon: <AiFillInstagram />,
-    link: '',
+    link: 'https://www.instagram.com/luis.mfg/',
   },
 ]
 
@@ -65,8 +65,10 @@ const Home = () => {
               <a
                 key={element.name}
                 href={element.link}
+                target="_blank"
                 type="button"
                 className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
+                rel="noreferrer"
               >
                 {element.icon}
               </a>
