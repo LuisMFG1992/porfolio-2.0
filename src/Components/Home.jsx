@@ -31,8 +31,8 @@ const Home = () => {
       id="home"
       className="flex items-center min-h-screen relative p-2 xs:px-10 md:px-20"
     >
-      <div className="flex flex-col gap-5 max-w-[30rem] lg:max-w-[40rem]">
-        <h1 className="text-6xl font-bold">
+      <div className="flex flex-col items-center xs:items-start gap-5 max-w-[30rem] lg:max-w-[40rem]">
+        <h1 className="text-6xl font-bold text-center xs:text-start">
           Hi, I'm <br className="lg:hidden" />
           <span className="text-primary">Luis Flores</span>
         </h1>
@@ -61,7 +61,7 @@ const Home = () => {
             Let's Talk
           </button>
 
-          <div className="absolute bottom-12 flex gap-5">
+          <div className="absolute bottom-12 flex gap-8 xs:gap-5">
             {socialMedia.map((element) => (
               <a
                 key={element.name}
