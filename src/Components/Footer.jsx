@@ -8,7 +8,7 @@ const Footer = () => {
         href="#home"
         className="absolute bottom-[-2px] right-0 md:right-5 bg-white rounded-lg"
       >
-        <BsFillArrowUpSquareFill size={'1.8rem'} className=" text-primary" />
+        <BsFillArrowUpSquareFill size={'1.8rem'} className="text-primary" />
       </a>
     </footer>
   )

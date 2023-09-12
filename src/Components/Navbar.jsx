@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useWindowResize } from '../hooks/useWindowResize'
-
 import { GiHamburgerMenu } from 'react-icons/gi'
+
+import logoDark from '../assets/logo-dark.png'
 
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
@@ -52,8 +53,10 @@ const Navbar = () => {
       {isMobile && (
         <div className="flex justify-between items-center h-12">
           <h1 className="text-3xl font-semibold">
-            LMFG<span className="text-primary text-5xl">.</span>
+            LMFG
+            <span className="text-primary text-5xl">.</span>
           </h1>
+
           <div
             className="flex justify-between items-center h-12"
             onClick={toggleHamburgerMenu}
