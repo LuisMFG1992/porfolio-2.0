@@ -5,7 +5,7 @@ const Cards = (project) => {
   return (
     <a
       href={`#${name}`}
-      className="bg-bgDarker w-72 h-60 flex flex-col justify-start items-center rounded-lg relative border-[0.2rem] border-primary pointer-events-auto"
+      className="bg-bgDarker w-60 md:w-72 h-52 md:h-60 flex flex-col justify-start items-center rounded-lg relative border-[0.2rem] border-primary pointer-events-auto"
     >
       <img
         src={image}

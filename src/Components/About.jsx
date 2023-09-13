@@ -21,11 +21,12 @@ const About = () => {
           From Nuts and Bolts to Lines of Code
         </h3>
         <p className="text-center max-w-[80%]">
-          A my journey from mechanical engineering to web development, a chance
-          encounter with programming changed my perspective. After a solid
-          career in engineering, I discovered how programming concepts could
-          ingeniously solve everyday problems. This spark led me to study
-          programming with passion, and now....
+          My story is a testament to how a simple conversation about palindromes
+          can transform your life if you are willing to embrace new
+          opportunities. So, if you ever find yourself at a similar crossroads,
+          remember that change can be your best ally in the pursuit of your true
+          passion. Life is too short not to follow your heart and dreams, even
+          if it means leaving nuts and bolts behind!
         </p>
       </div>
       <button

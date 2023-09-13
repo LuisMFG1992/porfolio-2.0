@@ -10,7 +10,7 @@ import firebase from '../assets/technologies/firebase-icon.svg'
 import git from '../assets/technologies/git-icon.svg'
 import react from '../assets/technologies/reactjs-icon.svg'
 
-const Technologies = () => {
+const Skills = () => {
   const technologies = [
     {
       name: 'HTML',
@@ -64,7 +64,7 @@ const Technologies = () => {
       className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20"
     >
       <h2 className="text-5xl font-bold text-center">
-        Technologies<span className="text-primary">.</span>
+        Skills<span className="text-primary">.</span>
       </h2>
       <div className="flex justify-center flex-wrap gap-5">
         {technologies.map((element) => (
@@ -82,4 +82,4 @@ const Technologies = () => {
   )
 }
 
-export default Technologies
+export default Skills

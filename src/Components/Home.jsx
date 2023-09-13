@@ -43,9 +43,8 @@ const Home = () => {
         </div>
         <p className="text-center xs:text-start">
           Always excited to embrace new challenges, constantly committed to
-          learning, I approach each project with the perfect blend of user
-          experience and efficiency. My goal is to turn ideas into realities by
-          merging creative innovation with practicality.
+          learning, My goal is to turn ideas into realities by merging creative
+          innovation with practicality.
         </p>
         <div className="flex gap-5">
           <button
