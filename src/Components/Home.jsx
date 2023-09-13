@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex items-center min-h-screen relative p-2 xs:px-10 md:px-20"
+      className="flex items-center min-h-screen relative p-2 xs:px-10 md:px-15"
     >
       <div className="flex flex-col items-center xs:items-start gap-5 max-w-[30rem] lg:max-w-[40rem]">
         <h1 className="text-6xl font-bold text-center xs:text-start">
@@ -41,9 +41,9 @@ const Home = () => {
             Frontend Developer
           </h3>
         </div>
-        <p className="text-center xs:text-start">
-          Always excited to embrace new challenges, constantly committed to
-          learning, My goal is to turn ideas into realities by merging creative
+        <p className="text-center xs:text-start text-paragraphs">
+          Always excited to embrace new challenges and constantly committed to
+          learning. My goal is to turn ideas into realities by merging creative
           innovation with practicality.
         </p>
         <div className="flex gap-5">

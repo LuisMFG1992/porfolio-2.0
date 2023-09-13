@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20"
+      className="flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-15"
     >
       <h2 className="text-5xl font-bold text-center">
         <span className="text-primary">My</span> Projects

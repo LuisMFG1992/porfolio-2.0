@@ -37,6 +37,8 @@ const Navbar = () => {
     { text: 'Home', url: '#home' },
     { text: 'About', url: '#about' },
     { text: 'Projects', url: '#projects' },
+    { text: 'Skills', url: '#skills' },
+    { text: 'Experience', url: '#experience' },
     { text: 'Contact', url: '#contact' },
   ]
 
@@ -45,16 +47,16 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full  py-2 px-4 xs:px-10 md:px-20 fixed top-0 left-0 z-10  ${
+      className={`w-full  py-2 px-4 xs:px-10 md:px-15 fixed top-0 left-0 z-10  ${
         NavbarColor ? 'bg-bgDarker border-b-2 border-primary' : ''
       }`}
     >
       {/* Mobile */}
       {isMobile && (
         <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-3xl font-semibold flex justify-center items-center">
             LMFG
-            <span className="text-primary text-5xl">.</span>
+            <span className="text-primary text-5xl pb-1">.</span>
           </h1>
 
           <div
@@ -91,10 +93,10 @@ const Navbar = () => {
       {/* Desktop */}
       {!isMobile && (
         <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold">
-            LMFG<span className="text-primary text-5xl">.</span>
+          <h1 className="text-3xl font-semibold flex justify-center items-center">
+            LMFG<span className="text-primary text-5xl pb-1">.</span>
           </h1>
-          <div className="flex gap-5 text-[1.2rem] font-semibold">
+          <div className="flex gap-5 text-[1.1rem] font-semibold">
             {links.map((link, index) => (
               <a
                 key={index}

@@ -9,6 +9,7 @@ export default {
         primary: '#9333ea',
         primaryHover: '#7e22ce',
         secunday: '#ffff',
+        paragraphs: 'rgb(156 163 175)',
       },
       screens: {
         xs: '425px',

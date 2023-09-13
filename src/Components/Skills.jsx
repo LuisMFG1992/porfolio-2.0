@@ -9,6 +9,10 @@ import figma from '../assets/technologies/figma-icon.svg'
 import firebase from '../assets/technologies/firebase-icon.svg'
 import git from '../assets/technologies/git-icon.svg'
 import react from '../assets/technologies/reactjs-icon.svg'
+import vite from '../assets/technologies/vite.svg'
+import eslint from '../assets/technologies/eslint.svg'
+import redux from '../assets/technologies/redux.svg'
+// import next from '../assets/technologies/next.svg'
 
 const Skills = () => {
   const technologies = [
@@ -27,6 +31,10 @@ const Skills = () => {
     {
       name: 'React',
       logo: react,
+    },
+    {
+      name: 'Redux',
+      logo: redux,
     },
     {
       name: 'SASS',
@@ -56,12 +64,24 @@ const Skills = () => {
       name: 'Git',
       logo: git,
     },
+    {
+      name: 'Vite',
+      logo: vite,
+    },
+    {
+      name: 'Eslint',
+      logo: eslint,
+    },
+    // {
+    //   name: 'Next',
+    //   logo: next,
+    // },
   ]
 
   return (
     <section
-      id="about"
-      className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20"
+      id="skills"
+      className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-15"
     >
       <h2 className="text-5xl font-bold text-center">
         Skills<span className="text-primary">.</span>
@@ -72,7 +92,7 @@ const Skills = () => {
             <img
               src={element.logo}
               alt={`${element.name}-logo`}
-              className="w-[3rem] h-[3rem]"
+              className="w-[4rem] h-[4rem]"
             />
             <p>{element.name}</p>
           </div>

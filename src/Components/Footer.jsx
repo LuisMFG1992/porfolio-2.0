@@ -6,7 +6,7 @@ const Footer = () => {
       © 2023. All Rights Reserved.
       <a
         href="#home"
-        className="absolute bottom-[-2px] right-0 md:right-5 bg-white rounded-lg"
+        className="absolute bottom-[-2px] right-0 xs:right-5 bg-white rounded-lg"
       >
         <BsFillArrowUpSquareFill size={'1.8rem'} className="text-primary" />
       </a>

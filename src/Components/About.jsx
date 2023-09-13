@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-20"
+      className="bg-bgDarker flex flex-col justify-center items-center gap-8 py-20 p-2 xs:px-10 md:px-15 relative"
     >
       <h2 className="text-5xl font-bold text-center">
         About <span className="text-primary">Me</span>
@@ -20,7 +20,7 @@ const About = () => {
         <h3 className="text-center text-2xl font-bold">
           From Nuts and Bolts to Lines of Code
         </h3>
-        <p className="text-center max-w-[80%]">
+        <p className="text-center max-w-[80%] text-paragraphs">
           My story is a testament to how a simple conversation about palindromes
           can transform your life if you are willing to embrace new
           opportunities. So, if you ever find yourself at a similar crossroads,
