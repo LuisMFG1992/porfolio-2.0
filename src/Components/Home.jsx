@@ -42,10 +42,10 @@ const Home = () => {
           </h3>
         </div>
         <p className="text-center xs:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ullam.
-          Sunt tenetur quos, provident laborum molestiae odit sapiente?
-          Excepturi, nam! Quam, minima blanditiis explicabo ea in quo cumque
-          tenetur totam.
+          Always excited to embrace new challenges, constantly committed to
+          learning, I approach each project with the perfect blend of user
+          experience and efficiency. My goal is to turn ideas into realities by
+          merging creative innovation with practicality.
         </p>
         <div className="flex gap-5">
           <button

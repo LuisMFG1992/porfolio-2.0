@@ -13,14 +13,6 @@ const Contact = () => {
       form.current,
       'DuN_3yr7llXMfFFnE'
     )
-    // .then(
-    //   (result) => {
-    //     console.log(result.text)
-    //   },
-    //   (error) => {
-    //     console.log(error.text)
-    //   }
-    // )
   }
 
   return (
@@ -46,6 +38,7 @@ const Contact = () => {
           <input
             type="text"
             id="name"
+            autoComplete="name"
             name="user_name"
             className="shadow-sm bg-gray-50  text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-bgDark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             required
@@ -61,6 +54,7 @@ const Contact = () => {
           <input
             type="email"
             id="email"
+            autoComplete="email"
             name="user_email"
             className="shadow-sm bg-gray-50  text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-bgDark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             placeholder="name@mail.com"
@@ -77,6 +71,7 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
+            autoComplete="message"
             rows="4"
             name="user_message"
             className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-bgDark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

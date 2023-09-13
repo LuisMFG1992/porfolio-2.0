@@ -17,13 +17,15 @@ const About = () => {
         />
       </div>
       <div className="flex flex-col justify-center items-center gap-7">
-        <h3 className="text-center text-2xl font-bold">Frontend Developer</h3>
+        <h3 className="text-center text-2xl font-bold">
+          From Nuts and Bolts to Lines of Code
+        </h3>
         <p className="text-center max-w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio est
-          animi ab veritatis ipsam? Voluptas magni eaque non consectetur.
-          Possimus, unde. Earum repellat officiis explicabo nihil ratione
-          reiciendis obcaecati eius? Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Similique possimus sint in fugit iusto atque nostrum
+          A my journey from mechanical engineering to web development, a chance
+          encounter with programming changed my perspective. After a solid
+          career in engineering, I discovered how programming concepts could
+          ingeniously solve everyday problems. This spark led me to study
+          programming with passion, and now....
         </p>
       </div>
       <button

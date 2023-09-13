@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full  p-2 xs:px-10 md:px-20 fixed top-0 left-0 z-10  ${
+      className={`w-full  py-2 px-4 xs:px-10 md:px-20 fixed top-0 left-0 z-10  ${
         NavbarColor ? 'bg-bgDarker border-b-2 border-primary' : ''
       }`}
     >
