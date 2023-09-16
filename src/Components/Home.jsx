@@ -49,13 +49,13 @@ const Home = () => {
         <div className="flex gap-5">
           <button
             type="button"
-            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
+            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-[0.2rem] dark:hover:ring-primary"
           >
             Hire Me
           </button>
           <button
             type="button"
-            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
+            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border-[0.2rem] border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
           >
             Let's Talk
           </button>
@@ -67,7 +67,7 @@ const Home = () => {
                 href={element.link}
                 target="_blank"
                 type="button"
-                className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
+                className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-[0.2rem] dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
                 rel="noreferrer"
               >
                 {element.icon}
