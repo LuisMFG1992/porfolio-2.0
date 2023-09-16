@@ -62,13 +62,15 @@ const Navbar = () => {
       }`}
     >
       {/* Mobile */}
-      {isMobile && (
-        <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold flex justify-center items-center">
-            LMFG
-            <span className="text-primary text-5xl pb-1">.</span>
-          </h1>
 
+      <div className="flex justify-between items-center h-12">
+        <h1 className="text-3xl font-semibold flex justify-center items-center">
+          LMFG
+          <span className="text-primary text-5xl pb-1">.</span>
+        </h1>
+
+        {/* Mobile */}
+        {isMobile && (
           <div
             className="flex justify-between items-center h-12"
             onClick={toggleHamburgerMenu}
@@ -96,15 +98,10 @@ const Navbar = () => {
               )}
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Desktop */}
-      {!isMobile && (
-        <div className="flex justify-between items-center h-12">
-          <h1 className="text-3xl font-semibold flex justify-center items-center">
-            LMFG<span className="text-primary text-5xl pb-1">.</span>
-          </h1>
+        {/* Desktop */}
+        {!isMobile && (
           <div className="flex gap-5 text-[1.1rem] font-semibold">
             {links.map((link, index) => (
               <a
@@ -118,8 +115,8 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }
