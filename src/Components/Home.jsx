@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaFacebookF } from 'react-icons/fa6'
+import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoIosArrowDown } from 'react-icons/io'
 
@@ -14,9 +14,9 @@ const socialMedia = [
     link: 'https://www.linkedin.com/in/luismfgdev/',
   },
   {
-    name: 'Facebook',
-    icon: <FaFacebookF />,
-    link: 'https://www.facebook.com/luismiguel.floresgranadillo',
+    name: 'Twitter',
+    icon: <FaXTwitter />,
+    link: 'https://twitter.com/LuisMiguelF',
   },
   {
     name: 'Instagram',
