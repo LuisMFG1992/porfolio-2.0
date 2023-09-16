@@ -2,12 +2,10 @@ import { useEffect, useState } from 'react'
 import { useWindowResize } from '../hooks/useWindowResize'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-import logoDark from '../assets/logo-dark.png'
-
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
-  const [selectedLink, setSelectedLink] = useState(0)
+  const [activeLink, setActiveLink] = useState('#home')
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 90) {
@@ -21,11 +19,8 @@ const Navbar = () => {
     setDisplayHamburgerMenu(!displayHamburgerMenu)
   }
 
-  const handleLinkClick = (index) => {
-    setSelectedLink(index)
-  }
-
   useEffect(() => {
+    changeNavbarColor()
     window.addEventListener('scroll', changeNavbarColor)
 
     return () => {
@@ -44,6 +39,21 @@ const Navbar = () => {
 
   const size = useWindowResize()
   const isMobile = size.width < 768 ? true : false
+
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section')
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 125
+      const sectionBottom = sectionTop + section.clientHeight
+      const scrollPosition = window.scrollY
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        const sectionId = section.getAttribute('id')
+        setActiveLink(`#${sectionId}`)
+      }
+    })
+  })
 
   return (
     <div
@@ -101,9 +111,8 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.url}
-                onClick={() => handleLinkClick(index)}
-                className={`hover:text-primary ${
-                  selectedLink === index ? 'text-primary' : 'text-white'
+                className={`hover:scale-125 transition-all ease-in ${
+                  activeLink === link.url ? 'text-primary' : 'text-white'
                 }`}
               >
                 {link.text}

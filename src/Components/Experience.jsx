@@ -4,21 +4,21 @@ const Experience = () => {
   const snapshotsTimeline = [
     {
       id: 1,
-      date: 'December 2022',
+      date: 'December 2022 - Februery 2023',
       title: 'Freelancer',
       description:
         'Create components and features according to customer specifications.',
     },
     {
       id: 2,
-      date: 'June 2022',
+      date: 'June 2022 - August 2022',
       title: 'Freelancer',
       description:
         'Add and make changes to an existing e-commerce site according to customer requirements.',
     },
     {
       id: 3,
-      date: 'Jamuary 2022',
+      date: 'Jamuary 2022 - March 2022',
       title: 'Freelancer',
       description:
         'Develop a web app for managing the electrical blueprints of medium voltage equipment in power substations using React and Firebase as the backend.',

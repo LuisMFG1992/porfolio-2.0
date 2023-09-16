@@ -30,7 +30,7 @@ const Projects = () => {
       <h2 className="text-5xl font-bold text-center">
         <span className="text-primary">My</span> Projects
       </h2>
-      <p className="text-center">
+      <p className="text-center font-semibold">
         The power to create is in your hands. Code that transforms ideas into
         reality.
       </p>
