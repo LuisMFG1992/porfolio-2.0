@@ -79,7 +79,7 @@ const Navbar = () => {
               <GiHamburgerMenu size={'1.5rem'} className="cursor-pointer" />
               {displayHamburgerMenu && (
                 <div
-                  className={`min-w-[8rem] absolute top-12 right-0 flex flex-col items-center rounded-lg py-4 shadow-md font-semibold ${
+                  className={`min-w-[8rem] absolute top-11 right-0 flex flex-col items-center rounded-lg py-4 shadow-md font-semibold border-[0.2rem] border-primary  ${
                     NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
                   }`}
                 >
