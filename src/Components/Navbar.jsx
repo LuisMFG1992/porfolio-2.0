@@ -81,13 +81,12 @@ const Navbar = () => {
                     NavbarColor ? 'dark:bg-bgDarker' : 'dark:bg-bgDark'
                   }`}
                 >
-                  {links.map((link, index) => (
+                  {links.map((link) => (
                     <a
                       key={link.text}
                       href={link.url}
-                      onClick={() => handleLinkClick(index)}
                       className={`hover:text-primary py-2 ${
-                        selectedLink === index ? 'text-primary' : 'text-white'
+                        activeLink === link.url ? 'text-primary' : 'text-white'
                       }`}
                     >
                       {link.text}
