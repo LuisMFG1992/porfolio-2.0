@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useWindowResize } from '../hooks/useWindowResize'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from 'react-router-dom'
+
+const links = [
+  { text: 'Home', url: '#home' },
+  { text: 'About', url: '#about' },
+  { text: 'Experience', url: '#experience' },
+  { text: 'Skills', url: '#skills' },
+  { text: 'Projects', url: '#projects' },
+  { text: 'Contact', url: '#contact' },
+]
 
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
@@ -8,7 +18,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#home')
 
   const changeNavbarColor = () => {
-    if (window.scrollY >= 90) {
+    if (window.scrollY >= 80) {
       setNavbarColor(true)
     } else {
       setNavbarColor(false)
@@ -28,15 +38,6 @@ const Navbar = () => {
     }
   }, [])
 
-  const links = [
-    { text: 'Home', url: '#home' },
-    { text: 'About', url: '#about' },
-    { text: 'Experience', url: '#experience' },
-    { text: 'Skills', url: '#skills' },
-    { text: 'Projects', url: '#projects' },
-    { text: 'Contact', url: '#contact' },
-  ]
-
   const size = useWindowResize()
   const isMobile = size.width < 768 ? true : false
 
@@ -44,7 +45,7 @@ const Navbar = () => {
     const sections = document.querySelectorAll('section')
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 125
+      const sectionTop = section.offsetTop - 200
       const sectionBottom = sectionTop + section.clientHeight
       const scrollPosition = window.scrollY
 
@@ -57,15 +58,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full  py-2 px-4 xs:px-10 md:px-15 fixed top-0 left-0 z-10  ${
+      className={`w-full py-2 px-4 xs:px-10 md:px-15 fixed top-0 left-0 z-10  ${
         NavbarColor ? 'bg-bgDarker border-b-[0.2rem] border-primary' : ''
       }`}
     >
-      {/* Mobile */}
-
       <div className="flex justify-between items-center h-12">
         <h1 className="text-3xl font-semibold flex justify-center items-center">
-          LMFG
+          <Link to="/">LMFG</Link>
           <span className="text-primary text-5xl pb-1">.</span>
         </h1>
 
