@@ -37,6 +37,10 @@ const Skills = () => {
       logo: redux,
     },
     {
+      name: 'Eslint',
+      logo: eslint,
+    },
+    {
       name: 'SASS',
       logo: sass,
     },
@@ -49,7 +53,7 @@ const Skills = () => {
       logo: tailwind,
     },
     {
-      name: 'Chakra',
+      name: 'Chakra UI',
       logo: chakra,
     },
     {
@@ -68,10 +72,7 @@ const Skills = () => {
       name: 'Vite',
       logo: vite,
     },
-    {
-      name: 'Eslint',
-      logo: eslint,
-    },
+
     // {
     //   name: 'Next',
     //   logo: next,

@@ -1,4 +1,4 @@
-import imagePlaceholderSquere from '../assets/imagePlaceholderSquere.png'
+import imagePlaceholderSquare from '../assets/imagePlaceholderSquare.png'
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
       </h2>
       <div>
         <img
-          src={imagePlaceholderSquere}
+          src={imagePlaceholderSquare}
           alt="about me image"
           className="w-[150px] h-[150px] rounded-full border-[0.4rem] border-primary"
         />

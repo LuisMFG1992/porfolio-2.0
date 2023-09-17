@@ -31,9 +31,9 @@ const Navbar = () => {
   const links = [
     { text: 'Home', url: '#home' },
     { text: 'About', url: '#about' },
-    { text: 'Projects', url: '#projects' },
-    { text: 'Skills', url: '#skills' },
     { text: 'Experience', url: '#experience' },
+    { text: 'Skills', url: '#skills' },
+    { text: 'Projects', url: '#projects' },
     { text: 'Contact', url: '#contact' },
   ]
 
@@ -87,7 +87,7 @@ const Navbar = () => {
                     <a
                       key={link.text}
                       href={link.url}
-                      className={`hover:text-primary py-2 ${
+                      className={`py-2 ${
                         activeLink === link.url ? 'text-primary' : 'text-white'
                       }`}
                     >

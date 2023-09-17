@@ -54,10 +54,12 @@ const Home = () => {
             Hire Me
           </button>
           <button
-            type="button"
+            type=""
             className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border-[0.2rem] border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
           >
-            Let's Talk
+            <a href="/src/assets/CV.pdf" download="CV.pdf">
+              Download CV
+            </a>
           </button>
 
           <div className="absolute bottom-12 flex gap-8 xs:gap-5">

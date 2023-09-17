@@ -1,21 +1,18 @@
 import Cards from './Cards'
 
-import BookTracker from '../assets/BookTracker.png'
+// import BookTracker from '../assets/BookTracker.png'
 import imagePlaceholderLandscape from '../assets/imagePlaceholderLandscape.png'
 
 const projects = [
   {
-    id: 1,
     name: 'Book Tracker',
-    image: BookTracker,
+    image: imagePlaceholderLandscape,
   },
   {
-    id: 2,
     name: 'Calculator',
     image: imagePlaceholderLandscape,
   },
   {
-    id: 3,
     name: 'Cutter optimizer',
     image: imagePlaceholderLandscape,
   },
@@ -34,16 +31,16 @@ const Projects = () => {
         The power to create is in your hands. Code that transforms ideas into
         reality.
       </p>
-      <div className="flex flex-wrap gap-5 max-w-[70rem] justify-center items-center">
+      <div className="flex flex-wrap gap-5 max-w-[800rem] justify-center items-center">
         {projects.map((element) => (
-          <Cards key={element.id} name={element.name} image={element.image} />
+          <Cards key={element.name} name={element.name} image={element.image} />
         ))}
       </div>
       <button
         type="button"
-        className="transform active:scale-110 transition-all text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
+        className="mt-8 transform active:scale-110 transition-all text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
       >
-        <a href="/">Show more</a>
+        <a href="/">Show all projects</a>
       </button>
     </section>
   )
