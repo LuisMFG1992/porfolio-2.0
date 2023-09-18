@@ -1,29 +1,12 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './Router/routes'
 
 import './index.css'
-
-import { AboutPage, ErrorPage, HomePage, ProjectPage, Root } from './pages'
-
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-} from 'react-router-dom'
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/projects" element={<ProjectPage />} />
-    </Route>
-  )
-)
+import { MyContextProvider } from './Context/themeContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <MyContextProvider>
     <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>
+  </MyContextProvider>
 )
