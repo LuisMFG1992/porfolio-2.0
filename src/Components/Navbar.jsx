@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useWindowResize } from '../hooks/useWindowResize'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
+import { useToggle } from '../hooks/useToggle'
 
 const links = [
   { text: 'Home', url: '#home' },
@@ -14,8 +15,9 @@ const links = [
 
 const Navbar = () => {
   const [NavbarColor, setNavbarColor] = useState(false)
-  const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false)
   const [activeLink, setActiveLink] = useState('#home')
+
+  const { status: displayHamburgerMenu, toggleStatus } = useToggle()
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
@@ -23,10 +25,6 @@ const Navbar = () => {
     } else {
       setNavbarColor(false)
     }
-  }
-
-  const toggleHamburgerMenu = () => {
-    setDisplayHamburgerMenu(!displayHamburgerMenu)
   }
 
   useEffect(() => {
@@ -72,7 +70,7 @@ const Navbar = () => {
         {isMobile && (
           <div
             className="flex justify-between items-center h-12"
-            onClick={toggleHamburgerMenu}
+            onClick={toggleStatus}
           >
             <div className="relative">
               <GiHamburgerMenu size={'1.5rem'} className="cursor-pointer" />
