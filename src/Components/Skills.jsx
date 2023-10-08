@@ -12,7 +12,7 @@ import react from '../assets/technologies/reactjs-icon.svg'
 import vite from '../assets/technologies/vite.svg'
 import eslint from '../assets/technologies/eslint.svg'
 import redux from '../assets/technologies/redux.svg'
-// import next from '../assets/technologies/next.svg'
+import next from '../assets/technologies/next.svg'
 
 const Skills = () => {
   const technologies = [
@@ -73,10 +73,10 @@ const Skills = () => {
       logo: vite,
     },
 
-    // {
-    //   name: 'Next',
-    //   logo: next,
-    // },
+    {
+      name: 'Next',
+      logo: next,
+    },
   ]
 
   return (
