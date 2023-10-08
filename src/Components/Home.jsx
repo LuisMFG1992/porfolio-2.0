@@ -31,8 +31,8 @@ const Home = () => {
       id="home"
       className="flex items-center min-h-screen relative p-2 xs:px-10 md:px-15"
     >
-      <div className="flex flex-col items-center xs:items-start gap-5 max-w-[30rem] lg:max-w-[40rem]">
-        <h1 className="text-6xl font-bold text-center xs:text-start">
+      <div className="flex flex-col xs:items-start gap-5 max-w-[30rem] lg:max-w-[40rem] px-2">
+        <h1 className="text-6xl font-bold text-start">
           Hi, I'm <br className="lg:hidden" />
           <span className="text-primary">Luis Flores</span>
         </h1>
@@ -41,7 +41,7 @@ const Home = () => {
             Frontend Developer
           </h3>
         </div>
-        <p className="text-center xs:text-start text-paragraphs">
+        <p className="text-start text-paragraphs">
           Always excited to embrace new challenges and constantly committed to
           learning. My goal is to turn ideas into realities by merging creative
           innovation with practicality.
@@ -62,7 +62,7 @@ const Home = () => {
             </a>
           </button>
 
-          <div className="absolute bottom-12 flex gap-8 xs:gap-5 left-5 xs:left-5">
+          <div className="absolute bottom-12 flex gap-8 xs:gap-5 left-4 xs:left-12">
             {socialMedia.map((element) => (
               <a
                 key={element.name}
