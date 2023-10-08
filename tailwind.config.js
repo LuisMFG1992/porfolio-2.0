@@ -8,7 +8,7 @@ export default {
         bgDarker: '#1a1a1a',
         primary: '#9333ea',
         primaryHover: '#7e22ce',
-        secunday: '#ffff',
+        secondary: '#ffff',
         paragraphs: 'rgb(156 163 175)',
       },
       screens: {

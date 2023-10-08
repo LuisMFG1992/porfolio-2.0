@@ -1,8 +1,5 @@
-import { Link } from 'react-router-dom'
 import imagePlaceholderSquare from '../assets/imagePlaceholderSquare.png'
 import { useState } from 'react'
-
-const history = ''
 
 const About = () => {
   const [readMore, setReadMore] = useState(false)
@@ -27,10 +24,10 @@ const About = () => {
           From Nuts and Bolts to Lines of Code
         </h3>
         <p
-          className={`md:max-w-[80%] text-paragraphs ${
+          className={`md:max-w-[80%] text-paragraphs px-4 xs:px-10 md:px-15 ${
             readMore
               ? ''
-              : 'overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]'
+              : 'text-center overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]'
           }`}
         >
           A few years ago, I found myself at a professional crossroads. I had
@@ -86,10 +83,13 @@ const About = () => {
       </div>
       <button
         type="button"
-        className="transform active:scale-110 transition-all text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
-        onClick={() => setReadMore((prev) => !prev)}
+        className="transform active:scale-110 transition-all text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
+        onClick={() => {
+          readMore ? (window.location.href = '#about') : ''
+          setReadMore((prev) => !prev)
+        }}
       >
-        Read More
+        {readMore ? 'Read Less' : 'Read More'}
       </button>
     </section>
   )

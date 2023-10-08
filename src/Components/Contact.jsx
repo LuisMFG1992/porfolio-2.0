@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Contact = () => {
   const form = useRef()
@@ -7,12 +8,21 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm(
-      'service_tq8k65i',
-      'template_gnzo9tr',
-      form.current,
-      'DuN_3yr7llXMfFFnE'
-    )
+    emailjs
+      .sendForm(
+        'service_tq8k65i',
+        'template_gnzo9tr',
+        form.current,
+        'DuN_3yr7llXMfFFnE'
+      )
+      .then((res) => {
+        if (res.status !== 200) toast.error('Error sending message.')
+
+        toast.success('Message sent.')
+      })
+      .catch(() => toast.error('Error sending message.'))
+
+    form.current.reset()
   }
 
   return (
@@ -82,12 +92,13 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <button
             type="submit"
-            className="transform active:scale-110 transition-all text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
+            className="transform active:scale-110 transition-all text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
           >
             Submit
           </button>
         </div>
       </form>
+      <Toaster position="top-center" />
     </section>
   )
 }

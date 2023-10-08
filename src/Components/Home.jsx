@@ -49,27 +49,27 @@ const Home = () => {
         <div className="flex gap-5">
           <button
             type="button"
-            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-[0.2rem] dark:hover:ring-primary"
+            className="transform active:scale-110 transition-all duration-75 text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-[0.2rem] dark:hover:ring-primary"
           >
             Hire Me
           </button>
           <button
             type=""
-            className="transform active:scale-110 transition-all duration-75 text-secunday bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border-[0.2rem] border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
+            className="transform active:scale-110 transition-all duration-75 text-secondary bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border-[0.2rem] border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
           >
             <a href="/src/assets/CV.pdf" download="CV.pdf">
               Download CV
             </a>
           </button>
 
-          <div className="absolute bottom-12 flex gap-8 xs:gap-5">
+          <div className="absolute bottom-12 flex gap-8 xs:gap-5 left-5 xs:left-5">
             {socialMedia.map((element) => (
               <a
                 key={element.name}
                 href={element.link}
                 target="_blank"
                 type="button"
-                className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-[0.2rem] dark:border-primary dark:text-secunday dark:hover:text-white  dark:hover:bg-primary"
+                className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:outline-none  font-medium rounded-full text-xl p-2.5 text-center inline-flex items-center dark:border-[0.2rem] dark:border-primary dark:text-secondary dark:hover:text-white  dark:hover:bg-primary"
                 rel="noreferrer"
               >
                 {element.icon}
