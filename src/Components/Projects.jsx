@@ -1,25 +1,38 @@
 import { Cards } from './index.js'
 
-// import BookTracker from '../assets/BookTracker.png'
 import imagePlaceholderLandscape from '../assets/imagePlaceholderLandscape.png'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const projects = [
   {
-    name: 'Book Tracker',
+    name: '1',
     image: imagePlaceholderLandscape,
   },
   {
-    name: 'Calculator',
+    name: '2',
     image: imagePlaceholderLandscape,
   },
   {
-    name: 'Cutter optimizer',
+    name: '3',
+    image: imagePlaceholderLandscape,
+  },
+  {
+    name: '4',
+    image: imagePlaceholderLandscape,
+  },
+  {
+    name: '5',
+    image: imagePlaceholderLandscape,
+  },
+  {
+    name: '6',
     image: imagePlaceholderLandscape,
   },
 ]
 
 const Projects = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false)
+
   return (
     <section
       id="projects"
@@ -33,18 +46,33 @@ const Projects = () => {
         reality.
       </p>
       <div className="flex flex-wrap gap-5 max-w-[800rem] justify-center items-center">
-        {projects.map((element) => (
-          <Cards key={element.name} name={element.name} image={element.image} />
-        ))}
+        {projects.map((project, idx) =>
+          showAllProjects ? (
+            <Cards
+              key={project.name}
+              name={project.name}
+              image={project.image}
+            />
+          ) : (
+            idx < 3 && (
+              <Cards
+                key={project.name}
+                name={project.name}
+                image={project.image}
+              />
+            )
+          )
+        )}
       </div>
-      <Link to="/projects">
-        <button
-          type="button"
-          className="mt-8 transform active:scale-110 transition-all text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
-        >
-          Show all projects
-        </button>
-      </Link>
+      <button
+        type="button"
+        className="mt-8 transform active:scale-110 transition-all text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
+        onClick={() => {
+          setShowAllProjects((prev) => !prev)
+        }}
+      >
+        Show all projects
+      </button>
     </section>
   )
 }

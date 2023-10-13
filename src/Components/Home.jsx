@@ -47,7 +47,7 @@ const Home = () => {
           innovation with practicality.
         </p>
         <div className="flex gap-5">
-          <button
+          {/* <button
             type="button"
             className="transform active:scale-110 transition-all duration-75 text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-[0.2rem] dark:hover:ring-primary"
           >
@@ -57,10 +57,13 @@ const Home = () => {
             type=""
             className="transform active:scale-110 transition-all duration-75 text-secondary bg-primary hover:bg-primaryHover font-semibold rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-bgDark border-[0.2rem] border-primary dark:hover:bg-primary dark:hover:text-white focus:outline-none"
           >
-            <a href="/src/assets/CV.pdf" download="CV.pdf">
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-9112b.appspot.com/o/CV.pdf?alt=media&token=e93a92a3-f876-4c66-8a72-fb5dfab981ac&_gl=1*8c5988*_ga*MTY5MDEwNTIyMi4xNjk2NzAyNzc4*_ga_CW55HF8NVT*MTY5NzEzOTM5Mi4yMC4xLjE2OTcxMzk0MDguNDQuMC4w"
+              download="Luis Flores CV.pdf"
+            >
               Download CV
             </a>
-          </button>
+          </button> */}
 
           <div className="absolute bottom-12 flex gap-8 xs:gap-5 left-4 xs:left-12">
             {socialMedia.map((element) => (
