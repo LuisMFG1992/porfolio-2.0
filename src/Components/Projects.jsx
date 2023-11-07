@@ -1,12 +1,14 @@
 import { Cards } from './index.js'
+import blueprintManager from '../assets/projects/blueprintManager.png'
 
 import imagePlaceholderLandscape from '../assets/imagePlaceholderLandscape.png'
 import { useState } from 'react'
 
 const projects = [
   {
-    name: '1',
-    image: imagePlaceholderLandscape,
+    name: 'Blueprint Manager',
+    image: blueprintManager,
+    url: 'https://blueprint-manager.web.app/',
   },
   {
     name: '2',
@@ -52,6 +54,7 @@ const Projects = () => {
               key={project.name}
               name={project.name}
               image={project.image}
+              url={project.url}
             />
           ) : (
             idx < 3 && (
@@ -59,6 +62,7 @@ const Projects = () => {
                 key={project.name}
                 name={project.name}
                 image={project.image}
+                url={project.url}
               />
             )
           )

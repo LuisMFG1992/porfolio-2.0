@@ -1,11 +1,13 @@
 import { useEffect } from 'react'
 import { Cards } from '../Components'
 import imagePlaceholderLandscape from '../assets/imagePlaceholderLandscape.png'
+import blueprintManager from '../assets/projects/blueprintManager.png'
 
 const projects = [
   {
-    name: 'Project 1',
-    image: imagePlaceholderLandscape,
+    name: 'Blueprint Manager',
+    image: blueprintManager,
+    link: 'https://blueprint-manager.web.app/',
   },
   {
     name: 'Project 2',

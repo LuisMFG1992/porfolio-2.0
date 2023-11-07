@@ -21,7 +21,7 @@ const About = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-7">
         <h3 className="text-center text-[1.4rem] font-semibold">
-          From Nuts and Bolts to Lines of Code
+          From nuts and bolts to lines of code
         </h3>
         <p
           className={`md:max-w-[80%] text-paragraphs px-4 xs:px-10 md:px-15 ${

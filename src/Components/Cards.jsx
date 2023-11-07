@@ -1,7 +1,5 @@
-// import BookTracker from '../assets/BookTracker.png'
-
 const Cards = (project) => {
-  const { name, image } = project
+  const { name, image, url } = project
   return (
     <div className="max-w-[18rem] bg-white border-[0.2rem] border-gray-200 rounded-lg shadow dark:bg-bgDarker dark:border-primary">
       <a href="#">
@@ -19,7 +17,9 @@ const Cards = (project) => {
           type="button"
           className="transform active:scale-110 transition-all text-secondary bg-primary hover:bg-primaryHover rounded-lg text-lg font-semibold px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-bgDark dark:hover:text-white dark:hover:ring-1 dark:hover:ring-primary focus:outline-none"
         >
-          <a href="/">See more</a>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            See more
+          </a>
         </button>
       </div>
     </div>
