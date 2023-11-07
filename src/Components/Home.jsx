@@ -8,7 +8,7 @@ const Home = () => {
       className="flex items-center min-h-screen relative p-2 xs:px-10 md:px-15"
     >
       <div className="flex flex-col xs:items-start gap-5 max-w-[30rem] lg:max-w-[40rem] px-2">
-        <h1 className="text-6xl font-bold text-start">
+        <h1 className="text-5xl md:text-6xl font-bold text-start">
           Hi, I'm <br className="lg:hidden" />
           <span className="text-primary">Luis Flores</span>
         </h1>
