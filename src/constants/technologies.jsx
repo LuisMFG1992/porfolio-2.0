@@ -13,6 +13,7 @@ import vite from '../assets/technologies/vite.svg'
 import eslint from '../assets/technologies/eslint.svg'
 import redux from '../assets/technologies/redux.svg'
 import next from '../assets/technologies/next.svg'
+import reactRouter from '../assets/technologies/reactRouter.svg'
 
 export const technologies = [
   {
@@ -38,6 +39,10 @@ export const technologies = [
   {
     name: 'Eslint',
     logo: eslint,
+  },
+  {
+    name: 'React Router',
+    logo: reactRouter,
   },
   {
     name: 'SASS',
